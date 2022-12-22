@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="web3">
+    <sql id="Base_r" >
+        title, createdtime,changetime,context,user
+    </sql>
+    <sql id="Base_v" >
+        #{title},#{createdtime},#{changetime},#{context},#{user}
+    </sql>
+
+    <sql id="Base_read" >
+        title, createdtime,changetime,context,user,withc
+    </sql>
+    <sql id="Base_values" >
+        #{title},#{createdtime},#{changetime},#{context},#{user},#{withc}
+    </sql>
+
+    <insert id="into_web3" parameterType="Boardcontext">
+        INSERT INTO web3(<include refid="Base_r" />) VALUES (<include refid="Base_v" />)
+    </insert>
+
+    <insert id="into_web3with" parameterType="Boardcontextwith">
+        INSERT INTO web3with(<include refid="Base_read" />) VALUES (<include refid="Base_values" />)
+    </insert>
+
+    <select id="getoneweb3" parameterType="int" resultType="Boardcontext">
+        SELECT *FROM web3 WHERE id=#{id}
+    </select>
+
+    <select id="getwithbbs_user" parameterType="int" resultType="Userwith">
+        SELECT * FROM web3,bbs_user WHERE web3.id = #{id} AND web3.user = bbs_user.username
+    </select>
+
+
+    <select id="getwithweb3" parameterType="int" resultType="Boardcontextwith">
+        SELECT bbs_user.*, web3with.* FROM web3,web3with,bbs_user WHERE web3.id = #{id} AND web3.id = web3with.withc AND web3with.user = bbs_user.username
+    </select>
+
+    <select id="getallweb3" resultType="Boardcontext">
+        SELECT *FROM web3
+    </select>
+
+</mapper>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="exp">
+    <sql id="Base_r" >
+        title, createdtime,changetime,context,user
+    </sql>
+    <sql id="Base_v" >
+        #{title},#{createdtime},#{changetime},#{context},#{user}
+    </sql>
+
+    <sql id="Base_read" >
+        title, createdtime,changetime,context,user,withc
+    </sql>
+    <sql id="Base_values" >
+        #{title},#{createdtime},#{changetime},#{context},#{user},#{withc}
+    </sql>
+
+    <insert id="into_exp" parameterType="Boardcontext">
+        INSERT INTO exp(<include refid="Base_r" />) VALUES (<include refid="Base_v" />)
+    </insert>
+
+    <insert id="into_expwith" parameterType="Boardcontextwith">
+        INSERT INTO expwith(<include refid="Base_read" />) VALUES (<include refid="Base_values" />)
+    </insert>
+
+    <select id="getoneexp" parameterType="int" resultType="Boardcontext">
+        SELECT *FROM exp WHERE id=#{id}
+    </select>
+
+    <select id="getwithbbs_user" parameterType="int" resultType="Userwith">
+        SELECT * FROM exp,bbs_user WHERE exp.id = #{id} AND exp.user = bbs_user.username
+    </select>
+
+
+    <select id="getwithexp" parameterType="int" resultType="Boardcontextwith">
+        SELECT bbs_user.*,expwith.* FROM exp,expwith,bbs_user WHERE exp.id = #{id} AND exp.id = expwith.withc AND expwith.user = bbs_user.username
+    </select>
+
+    <select id="getallexp" resultType="Boardcontext">
+        SELECT *FROM exp
+    </select>
+
+</mapper>

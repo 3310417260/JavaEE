@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="dev">
+    <sql id="Base_r" >
+        title, createdtime,changetime,context,user
+    </sql>
+    <sql id="Base_v" >
+        #{title},#{createdtime},#{changetime},#{context},#{user}
+    </sql>
+
+    <sql id="Base_read" >
+        title, createdtime,changetime,context,user,withc
+    </sql>
+    <sql id="Base_values" >
+        #{title},#{createdtime},#{changetime},#{context},#{user},#{withc}
+    </sql>
+
+    <insert id="into_dev" parameterType="Boardcontext">
+        INSERT INTO dev(<include refid="Base_r" />) VALUES (<include refid="Base_v" />)
+    </insert>
+
+    <insert id="into_devwith" parameterType="Boardcontextwith">
+        INSERT INTO devwith(<include refid="Base_read" />) VALUES (<include refid="Base_values" />)
+    </insert>
+
+    <select id="getonedev" parameterType="int" resultType="Boardcontext">
+        SELECT *FROM dev WHERE id=#{id}
+    </select>
+
+    <select id="getwithbbs_user" parameterType="int" resultType="Userwith">
+        SELECT * FROM dev,bbs_user WHERE dev.id = #{id} AND dev.user = bbs_user.username
+    </select>
+
+
+    <select id="getwithdev" parameterType="int" resultType="Boardcontextwith">
+        SELECT bbs_user.*, devwith.* FROM dev,devwith,bbs_user WHERE dev.id = #{id} AND dev.id = devwith.withc AND devwith.user = bbs_user.username
+    </select>
+
+    <select id="getalldev" resultType="Boardcontext">
+        SELECT *FROM dev
+    </select>
+
+</mapper>

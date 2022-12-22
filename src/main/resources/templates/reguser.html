@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>登录</title>
+    <link rel="stylesheet" href="/jsandcss/bootstrap.css"/>
+    <link rel="stylesheet" href="/jsandcss/bootstrap-theme.css"/>
+    <script src="/jsandcss/jquery.js"></script>
+    <script src="/jsandcss/bootstrap.js"></script>
+    <link href="/jsandcss/login.css" type="text/css" rel="stylesheet">
+
+    <script src="/jsandcss/md5.min.js"></script>
+    <script src="../mybatis/jsandcss/my_md5.js"></script>
+</head>
+<body>
+<div class="login">
+<div class="login-box">
+    <div id="darkbannerwrap"></div>
+    <#if ismessage??>
+        <div class="alert alert-danger alert-dismissable">
+            <button type="button" class="close" data-dismiss="alert"aria-hidden="true"></button>
+            提示！注册成功。
+        </div>
+    </#if>
+    <form action="/reguser" method="post">
+        <div class="user-box">
+            <input name="username"  required="" type="text" value="">
+            <label>Username</label>
+        </div>
+
+        <div class="user-box">
+            <input name="password" id="password"  required="" type="password" value="">
+            <label>Password</label>
+        </div>
+
+        <div class="user-box">
+            <div style="text-align: center;"><img src="/images/captrue"></div>
+            <input name="captruecode"  required="" type="text">
+            <label>captruecode</label>
+        </div>
+        <div class="user-box">
+            <input name="roles"  required="" type="text">
+            <label>roles</label>
+        </div>
+
+
+        <div class="user-box">
+            <input name="userpics" placeholder="" required="" type="text">
+            <label>userpictures (like:http://xxxx.jpg)</label>
+        </div>
+        <div class="user-box">
+            <input name="messages"  required="" type="text">
+            <label>messages</label>
+        </div>
+        <a href="# " >
+            <span></span>
+            <span></span>
+            <button class="log_button" >SUBMIT</button>
+        </a>
+    </form>
+
+
+</div>
+</div>
+</body>
+</html>

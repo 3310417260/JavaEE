@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="/jsandcss/bootstrap.css"/>
+    <link rel="stylesheet" href="/jsandcss/bootstrap-theme.css"/>
+    <link rel="stylesheet" href="/jsandcss/style_1_common.css"/>
+    <script src="/jsandcss/jquery.js"></script>
+    <script src="/jsandcss/bootstrap.js"></script>
+
+
+</head>
+<body>
+<link href="/jsandcss/login.css" type="text/css" rel="stylesheet">
+
+<script src="/jsandcss/md5.min.js"></script>
+<script src="../mybatis/jsandcss/my_md5.js"></script>
+
+<div class="login">
+    <div class="login-box">
+        <h2>Refactor</h2>
+        <form action="/yourselfmessages" method="post" role="form">
+            <div class="user-box">
+                <input name="username"  required="" type="text" value="">
+                <label>Username</label>
+            </div>
+
+            <div class="user-box">
+                <input name="password" id="password"  required="" type="password" value="">
+                <label>Password</label>
+            </div>
+            <div class="user-box">
+                <div style="text-align: center;"><img src="/images/captrue"></div>
+                <input name="captruecode"  required="" type="text">
+                <label>captruecode</label>
+            </div>
+            <div class="user-box">
+                <input name="roles"  required="" type="text">
+                <label>roles</label>
+            </div>
+
+
+            <div class="user-box">
+                <input name="userpics" placeholder="" required="" type="text">
+                <label>userpictures (like:http://xxxx.jpg)</label>
+            </div>
+            <div class="user-box">
+                <input name="messages"  required="" type="text">
+                <label>messages</label>
+            </div>
+            <a href="# " >
+                <span></span>
+                <span></span>
+                <button class="log_button" onclick="makeMD5()"> SUBMIT</button>
+            </a>
+        </form>
+    </div>
+
+
+
+
+</div>
+</div>
+
+<script src="/jsandcss/md5.min.js"></script>
+<script src="../mybatis/jsandcss/my_md5.js"></script>
+
+</body>
+</html>

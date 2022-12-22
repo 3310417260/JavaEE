@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+    <script src="/jsandcss/jquery.js"></script>
+    <link rel="stylesheet" href="/jsandcss/bootstrap.css"/>
+    <link rel="stylesheet" href="/jsandcss/bootstrap-theme.css"/>
+    <script src="/jsandcss/bootstrap.js"></script>
+    <link href="/jsandcss/writedata.css" type="text/css" rel="stylesheet">
+    <script src="/jsandcss/md5.min.js"></script>
+    <script src="../mybatis/jsandcss/my_md5.js"></script>
+</head>
+<body>
+<div class="login">
+    <div class="text-box">
+        <h2>Post Your Article</h2>
+        <div>
+            <button id="select1"  type="button" class="log_button">安全技术</button>
+            <button id="select2" type="button" class="log_button">开发技术</button>
+            <button id="select3" type="button" class="log_button">面试经验</button>
+            <button id="select4" type="button" class="log_button">Web3技术</button>
+        </div>
+        <br>
+        <br>
+        <form action="/wirtedatahtml" method="post">
+            <div class="user-box">
+                <input type="hidden" id="justforurl" name="justforurl">
+                <input id="showselectinput">
+                <input  type="hidden" id="selectinput" name="selectinput">
+            </div>
+            <div class="user-box">
+                <input name="title"  required="" type="text" value="">
+                <label>title</label>
+            </div>
+            <div class="user-box">
+                <textarea class="text_show"></textarea>
+            </div>
+            <a href="# " >
+                <span></span>
+                <span></span>
+                <div class="col-sm-10">
+                    <button class="text_button" type="submit" > SUBMIT</button>
+                </div>
+            </a>
+
+        </form>
+    </div>
+</div>
+<script type="text/javascript" src="../dist/js/lib/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="../dist/js/wangEditor.js"></script>
+
+<script type="text/javascript">
+    $(function () {
+        $("#select1").click(function () {
+            $("#showselectinput").val("安全技术");
+            $("#selectinput").val("security.into_security");
+            $("#justforurl").val('security');
+
+        })
+        $("#select2").click(function () {
+            $("#showselectinput").val("开发技术");
+            $("#selectinput").val("dev.into_dev");
+            $("#justforurl").val('dev');
+        })
+        $("#select3").click(function () {
+            $("#showselectinput").val("面试经验");
+            $("#selectinput").val("exp.into_exp");
+            $("#justforurl").val('exp');
+        })
+        $("#select4").click(function () {
+            $("#showselectinput").val("Web3技术");
+            $("#selectinput").val("web3.into_web3");
+            $("#justforurl").val('web3');
+        })
+        $("#select7").click(function () {
+            $("#showselectinput").val("投诉");
+            $("#selectinput").val("forcomplain.into_anime");
+            $("#justforurl").val('bbs_forcomplain');
+        })
+
+    });
+
+</script>
+
+<script type="text/javascript">
+    wangEditor.config.printLog = false;
+    var editor = new wangEditor('content');
+    editor.config.emotionsShow = 'icon';
+    editor.config.emotions = {
+        'default': {
+            title: '默认',
+            data: '/emotions.data'
+        },
+    };
+
+    editor.onchange = function () {
+        console.log(this.$txt.html());
+    };
+    editor.create();
+</script>
+
+
+</body>
+</html>

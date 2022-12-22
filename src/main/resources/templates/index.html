@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>论坛主页</title>
+    <link rel="stylesheet" href="/jsandcss/css/style.css">
+</head>
+
+<body>
+<!-- 头部模块 -->
+<div class="header">
+    <div class="title">
+        <span>技术论坛</span>
+    </div>
+    <div class="time">
+        <span></span>
+    </div>
+    <#if userinfo??>
+    <div class="company">
+        <span><a href="/aboutme">${userinfo.username}</a></span>
+                <span><a href="/logout">Logout</a></span>
+        <span><a href="/wirtedatahtml">Post</a></span>
+    </div>
+</#if>
+</div>
+
+<!-- 主题模块 -->
+<div class="main">
+    <div class="animate">
+        <!-- 浮动层 -->
+        <div class="float">
+            <div class="floating1">
+                <div id="roate1">
+                    <div class="roate-item">
+                        <span><a href="/security">安全技术</a></span>
+                        <p>专区</p>
+                    </div>
+                </div>
+                <p class="pm">NO.5</p>
+            </div>
+            <div class="floating2">
+                <div id="roate2">
+                    <div class="roate-item2">
+                        <span><a href="/dev" style="text-decoration: none;color: white">开发技术</a></span>
+                        <p>专区</p>
+                    </div>
+                </div>
+                <p class="pm2">NO.4</p>
+            </div>
+            <div class="floating3">
+                <div id="roate3">
+                    <div class="roate-item3">
+                        <span><a href="/security" style="text-decoration: none;color: white">安全技术</a></span>
+                        <p>专区</p>
+                    </div>
+                </div>
+                <p class="pm3">NO.3</p>
+            </div>
+            <div class="floating4">
+                <div id="roate4">
+                    <div class="roate-item4">
+                        <span><a href="/exp" style="text-decoration: none;color: white">面试经验</a></span>
+                        <p>专区</p>
+                    </div>
+                </div>
+                <p class="pm4">NO.2</p>
+            </div>
+            <div class="floating5">
+                <div id="roate5">
+                    <div class="roate-item5">
+
+                        <span><a href="/web3" style="text-decoration: none;color: white">Web3</a></span>
+                        <p>专区</p>
+                    </div>
+                </div>
+                <p class="pm5">NO.1</p>
+            </div>
+        </div>
+        <div class="sum">
+
+            <div class="data">
+                <p>总文章数</p>
+                <#if total_article??>
+                <span>${total_article}</span>
+                </#if>
+            </div>
+            <div class="cicle1"></div>
+            <canvas id="canvas1"></canvas>
+            <canvas id="canvas2"></canvas>
+            <div class="data1">
+                <#if good2_Num??>
+                <div class="qiu">
+                    <p>${good2_Num}</p>
+                </div>
+                <span>精华文章</span>
+                </#if>
+            </div>
+            <div class="data2">
+                <#if good1_Num??>
+                <div class="qiu">
+                    <p>${good1_Num}</p>
+                </div>
+                <span>优秀文章</span>
+            </#if>
+            </div>
+            <div class="data3">
+                <div class="qiu">
+                    <p>86%</p>
+                </div>
+                <span>精华作者</span>
+            </div>
+            <div class="data4">
+                <div class="qiu">
+                    <p>73%</p>
+                </div>
+                <span>优秀作者</span>
+            </div>
+        </div>
+    </div>
+    <div class="charts">
+        <div class="charts1">
+            <div class="charts-title">
+                <span>今日文章</span>
+            </div>
+            <div class="charts-content1 content"></div>
+        </div>
+        <div class="charts2">
+
+            <div class="charts-title">
+                <span>文章阅读量排名</span>
+            </div>
+            <div class="charts-content2 content">
+                <table>
+                    <thead>
+                    <tr>
+                        <td>排名</td>
+                        <td>文章</td>
+                        <td>阅读人数</td>
+                        <td>比例</td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <#if read_by1??>
+                        <#if read_by2??>
+                        <#if read_by3??>
+                        <#if read_by4??>
+                        <#if read_by5??>
+                        <#if read_by6??>
+                        <#list read_by1 as article_name1>
+                        <#list read_by2 as article_name2>
+                        <#list read_by3 as article_name3>
+                        <#list read_by4 as article_name4>
+                        <#list read_by5 as article_name5>
+                        <#list read_by6 as article_name6>
+                        <td>01</td>
+                        <td>${article_name1}</td>
+                        <#if read_num1??>
+                        <#list read_num1 as rd1>
+                        <td>${rd1}</td>
+                        </#list>
+                        </#if>
+                        <td style="color: #dbbd73">85%<span class="chart1"></span></td>
+                    </tr>
+                    <tr>
+                        <td>02</td>
+                        <td>${article_name2}</td>
+                        <#if read_num2??>
+                        <#list read_num2 as rd2>
+                        <td>${rd2}</td>
+                    </#list>
+                    </#if>
+                        <td style="color: #4bd8ba">85%<span class="chart2"></span></td>
+                    </tr>
+                    <tr>
+                        <td>03</td>
+                        <td>${article_name3}</td>
+                        <#if read_num3??>
+                        <#list read_num3 as rd3>
+                        <td>${rd3}</td>
+                    </#list>
+                    </#if>
+                        <td style="color: #4bd8ba">85%<span class="chart3"></span></td>
+                    </tr>
+                    <tr>
+                        <td>04</td>
+                        <td>${article_name4}</td>
+                        <#if read_num4??>
+                        <#list read_num4 as rd4>
+                        <td>${rd4}</td>
+                    </#list>
+                    </#if>
+                        <td style="color: #4bd8ba">85%<span class="chart4"></span></td>
+                    </tr>
+                    <tr>
+                        <td>05</td>
+                        <td>${article_name5}</td>
+                        <#if read_num5??>
+                        <#list read_num5 as rd5>
+                        <td>${rd5}</td>
+                    </#list>
+                    </#if>
+                        <td style="color: #dbbd73">85%<span class="chart5"></span></td>
+                    </tr>
+                    <tr>
+                        <td>06</td>
+                        <td>${article_name6}</td>
+                        <#if read_num6??>
+                        <#list read_num6 as rd6>
+                        <td>${rd6}</td>
+                    </#list>
+                    </#if>
+                        <td style="color: #4bd8ba">85%<span class="chart6"></span></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </#list>
+    </#list>
+</#list>
+</#list>
+</#list>
+</#list>
+</#if>
+</#if>
+</#if>
+</#if>
+</#if>
+</#if>
+
+        </div>
+    </div>
+</div>
+</body>
+<script src="js/jquery-1.11.0.min.js"></script>
+<script src="js/echarts.min.js"></script>
+<script src="js/main.js"></script>
+
+</html>
