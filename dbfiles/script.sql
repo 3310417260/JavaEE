@@ -1,4 +1,4 @@
-create table bbs_anime
+create table security
 (
     id          int auto_increment
         primary key,
@@ -9,30 +9,7 @@ create table bbs_anime
     user        varchar(255) null
 );
 
-create table bbs_animewith
-(
-    id          int auto_increment
-        primary key,
-    title       varchar(255) null,
-    context     text         null,
-    createdtime varchar(255) null,
-    changetime  varchar(255) null,
-    user        varchar(255) null,
-    withc       int          null
-);
-
-create table bbs_food
-(
-    id          int auto_increment
-        primary key,
-    title       varchar(255) null,
-    context     text         null,
-    createdtime varchar(255) null,
-    changetime  varchar(255) null,
-    user        varchar(255) null
-);
-
-create table bbs_foodwith
+create table securitywith
 (
     id          int auto_increment
         primary key,
@@ -67,7 +44,7 @@ create table bbs_forcomplainwith
     withc       int          null
 );
 
-create table bbs_historystory
+create table dev
 (
     id          int auto_increment
         primary key,
@@ -78,7 +55,7 @@ create table bbs_historystory
     user        varchar(255) null
 );
 
-create table bbs_historystorywith
+create table devwith
 (
     id          int auto_increment
         primary key,
@@ -90,7 +67,7 @@ create table bbs_historystorywith
     withc       int          null
 );
 
-create table bbs_military
+create table web3
 (
     id          int auto_increment
         primary key,
@@ -101,7 +78,7 @@ create table bbs_military
     user        varchar(255) null
 );
 
-create table bbs_militarywith
+create table web3with
 (
     id          int auto_increment
         primary key,
@@ -113,7 +90,7 @@ create table bbs_militarywith
     withc       int          null
 );
 
-create table bbs_political
+create table exp
 (
     id          int auto_increment
         primary key,
@@ -124,30 +101,7 @@ create table bbs_political
     user        varchar(255) null
 );
 
-create table bbs_politicalwith
-(
-    id          int auto_increment
-        primary key,
-    title       varchar(255) null,
-    context     text         null,
-    createdtime varchar(255) null,
-    changetime  varchar(255) null,
-    user        varchar(255) null,
-    withc       int          null
-);
-
-create table bbs_travel
-(
-    id          int auto_increment
-        primary key,
-    title       varchar(255) null,
-    context     text         null,
-    createdtime varchar(255) null,
-    changetime  varchar(255) null,
-    user        varchar(255) null
-);
-
-create table bbs_travelwith
+create table expwith
 (
     id          int auto_increment
         primary key,
