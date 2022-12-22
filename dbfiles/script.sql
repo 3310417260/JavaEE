@@ -1,3 +1,13 @@
+create table article
+(
+    id          varchar(255) auto_increment
+        primary key,
+    is_good1       varchar(255) null,
+    is_good2     varchar(255)         null,
+    name varchar(255) null,
+    read_by  int null
+);
+
 create table security
 (
     id          int auto_increment
