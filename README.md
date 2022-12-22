@@ -3,16 +3,10 @@
 ## 主页截图
 ![](snap_img/img.png)
 
-## 安装运行
-* 本程序为maven项目，所以首先需要下载和配置好maven.http://maven.apache.org/download.cgi
-* clone 本项目
-* 导入dbfiles\目录下sql文件到数据库
-* 配置数据库
-
-
-### 开发环境
-    Ubuntu20.04
-    Windows11
+## 如何使用
+* 使用本程序需要先配置好maven，如果是idea专业版的，可以进去跟着报错的提示配置
+* 把本项目克隆到本地，排查一下本地环境是否有不妥，确保能够运行。
+* 能运行之后就可以开始，配置数据库（数据库文件在dbfile目录下）
     
 ### 用到的技术	
 	JDk8
@@ -31,8 +25,7 @@
 * 各种数据统计
 
 
-### 开发中使用到的工具  
+### 使用的工具 
     IDEA
-    Postman
     navicat
-    DataGrip
+    CodePen
