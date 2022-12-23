@@ -206,5 +206,11 @@ public class Maincontroller {
         return "login";
     }
 
-
+    @GetMapping("/calc")
+    public String Calc() {
+        Subject currentUserId = SecurityUtils.getSubject();
+        User user = (User) currentUserId.getPrincipal();
+        User user2 = sqlSession.selectOne("mainmapper.getuser", user.getUsername());
+        return "Calc/calc";
+    }
 }
