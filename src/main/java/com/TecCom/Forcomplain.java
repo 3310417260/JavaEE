@@ -1,11 +1,11 @@
-package com.dreamImage;
+package com.TecCom;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
-import com.dreamImage.database.Boardcontext;
-import com.dreamImage.database.Boardcontextwith;
-import com.dreamImage.database.User;
-import com.dreamImage.database.Userwith;
+import com.TecCom.database.Boardcontext;
+import com.TecCom.database.Boardcontextwith;
+import com.TecCom.database.User;
+import com.TecCom.database.Userwith;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.subject.Subject;

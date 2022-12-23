@@ -34,7 +34,7 @@ spring:
 
 mybatis:
   mapper-locations: classpath:mybatis/mapper/*.xml
-  type-aliases-package: com.dreamImage.database
+  type-aliases-package: com.TecCom.database
 
 file:
   upload-dir: ./target/classes/templates/images/userimg

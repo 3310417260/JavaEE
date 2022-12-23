@@ -1,4 +1,4 @@
-package com.dreamImage.Configfiles;
+package com.TecCom.Configfiles;
 
 import org.apache.shiro.authc.AuthenticationToken;
 import org.apache.shiro.subject.Subject;

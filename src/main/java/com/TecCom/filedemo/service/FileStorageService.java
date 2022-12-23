@@ -1,8 +1,8 @@
-package com.dreamImage.filedemo.service;
+package com.TecCom.filedemo.service;
 
-import com.dreamImage.filedemo.exception.FileStorageException;
-import com.dreamImage.filedemo.exception.MyFileNotFoundException;
-import com.dreamImage.filedemo.property.FileStorageProperties;
+import com.TecCom.filedemo.exception.FileStorageException;
+import com.TecCom.filedemo.exception.MyFileNotFoundException;
+import com.TecCom.filedemo.property.FileStorageProperties;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.UrlResource;

@@ -1,7 +1,7 @@
-package com.dreamImage.filedemo.controller;
+package com.TecCom.filedemo.controller;
 
-import com.dreamImage.filedemo.payload.UploadFileResponse;
-import com.dreamImage.filedemo.service.FileStorageService;
+import com.TecCom.filedemo.payload.UploadFileResponse;
+import com.TecCom.filedemo.service.FileStorageService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,4 +1,4 @@
-package com.dreamImage.filedemo.exception;
+package com.TecCom.filedemo.exception;
 
 public class FileStorageException extends RuntimeException {
     public FileStorageException(String message) {

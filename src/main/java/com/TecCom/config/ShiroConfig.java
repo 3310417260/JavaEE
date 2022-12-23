@@ -1,7 +1,7 @@
-package com.dreamImage.config;
+package com.TecCom.config;
 
-import com.dreamImage.Configfiles.MyFormAuthenticationFilter;
-import com.dreamImage.Configfiles.Myrealm;
+import com.TecCom.Configfiles.MyFormAuthenticationFilter;
+import com.TecCom.Configfiles.Myrealm;
 import org.apache.shiro.mgt.SecurityManager;
 import org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor;
 import org.apache.shiro.spring.web.ShiroFilterFactoryBean;
@@ -66,19 +66,9 @@ public class ShiroConfig {
         filterChainDefinitionMap.put("/dist/**", "anon");
         filterChainDefinitionMap.put("/", "anon");
         filterChainDefinitionMap.put("/index", "anon");
-        filterChainDefinitionMap.put("/bbs_anime", "anon");
-        filterChainDefinitionMap.put("/bbs_anime/**", "anon");
+        filterChainDefinitionMap.put("/security", "anon");
+        filterChainDefinitionMap.put("/security/**", "anon");
 
-//        System.out.println("ShiroConfig");
-        filterChainDefinitionMap.put("/photo/**", "anon");//方便读取资源文件
-        filterChainDefinitionMap.put("/img1", "anon");
-        filterChainDefinitionMap.put("/imgpro", "anon");
-
-        filterChainDefinitionMap.put("/test", "anon");
-        filterChainDefinitionMap.put("/upload/**", "anon");//方便读取资源文件
-        filterChainDefinitionMap.put("/uploadFile/**", "anon");//
-        filterChainDefinitionMap.put("/uploadimg", "anon");//
-        filterChainDefinitionMap.put("/downloadFile/**", "anon");//
 
         filterChainDefinitionMap.put("sm.ms/**", "anon");//
         filterChainDefinitionMap.put("/**", "authc");

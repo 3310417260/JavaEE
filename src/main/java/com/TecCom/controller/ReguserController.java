@@ -1,6 +1,6 @@
-package com.dreamImage.controller;
+package com.TecCom.controller;
 
-import com.dreamImage.database.User;
+import com.TecCom.database.User;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

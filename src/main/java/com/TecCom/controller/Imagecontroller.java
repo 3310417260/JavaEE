@@ -1,4 +1,4 @@
-package com.dreamImage.controller;
+package com.TecCom.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

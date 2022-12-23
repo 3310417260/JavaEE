@@ -1,4 +1,4 @@
-package com.dreamImage.filedemo.property;
+package com.TecCom.filedemo.property;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 

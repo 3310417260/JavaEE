@@ -1,4 +1,4 @@
-package com.dreamImage.filedemo.payload;
+package com.TecCom.filedemo.payload;
 
 
 public class UploadFileResponse {

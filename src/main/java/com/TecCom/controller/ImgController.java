@@ -1,6 +1,6 @@
-package com.dreamImage.controller;
+package com.TecCom.controller;
 
-import com.dreamImage.database.User;
+import com.TecCom.database.User;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.subject.Subject;

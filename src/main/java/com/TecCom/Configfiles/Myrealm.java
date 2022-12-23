@@ -1,6 +1,6 @@
-package com.dreamImage.Configfiles;
+package com.TecCom.Configfiles;
 
-import com.dreamImage.database.User;
+import com.TecCom.database.User;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.shiro.authc.AuthenticationException;
 import org.apache.shiro.authc.AuthenticationInfo;

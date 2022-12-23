@@ -1,4 +1,4 @@
-package com.dreamImage.config;
+package com.TecCom.config;
 
 import com.github.pagehelper.PageHelper;
 import org.springframework.context.annotation.Bean;

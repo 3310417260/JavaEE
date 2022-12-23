@@ -1,9 +1,9 @@
-package com.dreamImage.controller;
+package com.TecCom.controller;
 
-import com.dreamImage.database.Article;
-import com.dreamImage.database.Boardcontext;
-import com.dreamImage.database.Boardcontextwith;
-import com.dreamImage.database.User;
+import com.TecCom.database.Article;
+import com.TecCom.database.Boardcontext;
+import com.TecCom.database.Boardcontextwith;
+import com.TecCom.database.User;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.subject.Subject;

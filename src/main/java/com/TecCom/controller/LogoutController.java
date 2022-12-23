@@ -1,4 +1,4 @@
-package com.dreamImage.controller;
+package com.TecCom.controller;
 
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.subject.Subject;

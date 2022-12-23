@@ -1,4 +1,4 @@
-package com.dreamImage.database;
+package com.TecCom.database;
 
 public class Boardcontext {
     private int id;

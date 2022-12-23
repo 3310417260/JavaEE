@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
-Main-Class: com.dreamImage.App
+Main-Class: com.TecCom.App
 Class-Path: spring-aop-4.3.8.RELEASE.jar spring-context-4.3.8.RELEASE.ja
  r spring-boot-devtools-1.5.3.RELEASE.jar shiro-cache-1.4.0.jar freemark
  er-2.3.26-incubating.jar tomcat-embed-websocket-8.5.14.jar mybatis-3.4.

@@ -1,4 +1,4 @@
-package com.dreamImage.domain;
+package com.TecCom.domain;
 
 import lombok.Data;
 

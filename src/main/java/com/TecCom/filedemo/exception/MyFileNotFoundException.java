@@ -1,4 +1,4 @@
-package com.dreamImage.filedemo.exception;
+package com.TecCom.filedemo.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
